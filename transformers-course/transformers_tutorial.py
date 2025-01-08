@@ -6,7 +6,7 @@ checkpoint = "distilbert-base-uncased-finetuned-sst-2-english"
 tokenizer = AutoTokenizer.from_pretrained(checkpoint)
 model = AutoModelForSequenceClassification.from_pretrained(checkpoint)   
 
-raw_inputs = ["I love pizza.", "I'm looking forward to the weekend", "I feel like a cat."]
+raw_inputs = ["I love pizza.", "My cat won't stop miaowing."]
 
 inputs = tokenizer(raw_inputs, padding=True, truncation=True, return_tensors="pt")
 
